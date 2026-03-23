@@ -19,26 +19,13 @@ brother1_games_genres = {"Lawnmowing Simulator": "Simulation",
                          "Pikmin 4": "Adventure", 
                          "Minecraft": "Sandbox", 
                          "Pokemon Violet": "Adventure"}
-brother2_games_genres = {"Portal 2": "Puzzle",
-                         "Dispatch": "Sandbox", 
-                         "Fall Guys": "Platformer", 
-                         "Geometry Dash": "Platformer",
-                         "Little Nightmares": "Horror", 
-                         "STAR WARS Jedi: Fallen Order": "Action-Adventure", 
-                         "Brawlhalla": "Fighting", 
-                         "Cuphead": "Platformer", 
-                         "Pizza Tower": "Platformer"}
-sister_games_genres = ["Hogwarts Legacy", "Resident Evil Requiem", "Starfield", 
-                "Borderlands 4", "Lethal Company", "Split Fiction", 
-                "The Elder Scrolls V: Skyrim", "Far Cry 5", 
-                "Resident Evil 4"]
 
 for game in brother1_games_genres:
   print(f"Game: {game}")
 
 your_games = input("What games do you own? ")
 
-if own_it.title() in brothers_games:
+if own_it.title() in brother1_games_genres:
   print(f"You own {own_it.title()}.")
 else:
   print("Game not found.")

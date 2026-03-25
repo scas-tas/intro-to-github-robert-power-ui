@@ -1,14 +1,10 @@
-#The user has three siblings: a brother, another brother, and a sister. Using a dictionary for every person including themself, they will assign a list of games to each dictionary.
-#These games will have their own genres, platform compatibility and multiplayer compatibility listed, and the four siblings (including them) will have to choose a game to play together when:
-#The time is between 9AM and 10PM (thats when everyone is awake)
-#The game aligns with everyones taste of genre at the time (depending on the users input of their specified taste from a group of options)
-#This means the user will have to code that the majority of the siblings have no problem with the game chosen (at least three, including the user)
-#If its a draw, another game will have to be chosen (or the code restarts and different information is inputted by the user for the users taste in games)
-#If someone does not have the game in their library already, they must buy it. Everyone has their own specified amount of money
-#, though the user will not have to input any amount of money for themselves (why would they be choosing a game that they havent bought yet?)
-#The game is available on the correct platform (everyone has their own platform, so the game has to be available for purchase on all of them.)
-#Possible genres: Puzzle, Action-Adventure, Arcade, Shooter, Platformer, Sandbox, Action RPG, Turn-Based Strategy.
-
+#The user has a brother who wants to play a video game with them. A list of the brother's games and their costs will be given to you. You then have to input a game of any choice.
+#The user will have to input their money, the video game suggestion, and the suggested video game's genre.
+#These games will have their own genres and costs, and the you will have to choose a game to play together when:
+#The game aligns with his taste of genre at the time (the list of genres he's interested in will be given to you).
+#The user can either input a game his brother owns, or a game the user owns. If the brother owns the game already, the user will have to pay for it.
+#If the player is the only one who owns the game, the brother will have to pay for it.
+#Neither person can go into debt, and you will be asked to choose another game.
 
 brother1_games_genres = {"Lawnmowing Simulator": "Simulation", 
                          "Mario Kart 8": "Racing", 
@@ -19,13 +15,29 @@ brother1_games_genres = {"Lawnmowing Simulator": "Simulation",
                          "Pikmin 4": "Adventure", 
                          "Minecraft": "Sandbox", 
                          "Pokemon Violet": "Adventure"}
+brother1_games_cost = {"Lawnmowing Simulator": 28.96, 
+                         "Mario Kart 8": 59.96, 
+                         "Terraria": 14.5,  
+                         "Human: Fall Flat": 28.93, 
+                         "Stardew Valley": 16.98, 
+                         "Super Mario Bros. Wonder": 59.99, 
+                         "Pikmin 4": 79.95, 
+                         "Minecraft": 29.99, 
+                         "Pokemon Violet": 69.0}
 
+print("Hello. Your brother would like to play a video game with you, but he is unsure of which one to play.")
+print("Here are some games he already has:")
+print("---------------------")
 for game in brother1_games_genres:
-  print(f"Game: {game}")
-
-your_games = input("What games do you own? ")
-
-if own_it.title() in brother1_games_genres:
-  print(f"You own {own_it.title()}.")
+  print(game)
+print("---------------------")
+print("If you want to play one of these, you will have to pay to buy it.")
+librarydecision = input("Would you like to play one of the games in his library (Yes/No)? ").title()
+if librarydecision == "Yes":
+  gamefrombrolibrary = input("Alright, what game would you like to play? ").title()
+  if gamefrombrolibrary in brother1_games_genres:
+    def yourmoney(input(f"Alright. How much money is in your bank account {$xx.xx}? ")):
+      if yourmoney < (brother1_games_cost[game]):
+        print("You cannot play that game right now, as that game is 'MONEY GO HERE' and you would go into debt.)
 else:
-  print("Game not found.")
+  print(".")

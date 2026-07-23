@@ -1,4 +1,5 @@
 def combine_trucks(trucks, first_truck, second_truck):
+    return(int(trucks[first_truck-1] + trucks[second_truck-1]))
     # TODO: return the total packages in first_truck and second_truck
     pass
 

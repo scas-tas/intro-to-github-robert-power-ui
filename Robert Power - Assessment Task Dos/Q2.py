@@ -12,13 +12,18 @@ def count_empty(classroom: list) -> int:
 def most_empty_row(classroom: list) -> int:
     best_row = 0
     best_count = -1
+    count_list = []
     for row_index in range(len(classroom)):
         # TODO: count the empty seats in classroom[row_index]
+        best_count = classroom[row_index].count(0)
+        count_list = count_list.append(best_count)
+        print(count_list)
         # TODO: if this row has more empty seats than best_count,
         #       update best_row and best_count
         pass
     return best_row
 
 
-classroom=[[0,0],[0,0]]
+classroom=[[1,2,0],[0,3,4],[5,0,0]]
 count_empty(classroom)
+most_empty_row(classroom)
